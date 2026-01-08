@@ -16,9 +16,9 @@ export const Navbar = component$(() => {
                 </a>
     
                 <ul class="hidden items-center gap-8 md:flex">
-                  {['Xizmatlar', 'Texnologiya', 'Loyihalar', 'Aloqa'].map((item) => (
+                  {['Xizmatlar', 'Texnologiya', 'Loyihalar', 'Hamkorlar'].map((item) => (
                     <li>
-                      <a href={`#${item.toLowerCase()}`} class="text-sm font-medium text-[#c8e6c9]/60 hover:text-[#81c784] transition-colors uppercase tracking-widest">{item}</a>
+                      <a href={`/${item.toLowerCase()}`} class="text-sm font-medium text-[#c8e6c9]/60 hover:text-[#81c784] transition-colors uppercase tracking-widest">{item}</a>
                     </li>
                   ))}
                 </ul>
