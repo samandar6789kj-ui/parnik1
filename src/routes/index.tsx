@@ -1,25 +1,28 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$,  } from '@builder.io/qwik';
+import { Navbar } from '~/components/landing/Navbar';
+import { Stats } from '~/components/landing/stats';
+import { Footer } from '~/components/landing/Footer';
+import { Solutions } from '~/components/landing/Solutions';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Hero } from '~/components/landing/Hero';
+
 
 export default component$(() => {
+
+
   return (
-    <>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
-    </>
+    <div class="min-h-screen bg-[#040d06] font-sans text-[#e8f5e9]/90 selection:bg-[#4caf50]/30">
+      
+     <Navbar/>
+
+     <Solutions/>
+
+
+     <Stats/>
+     
+     
+     <Footer/>
+
+    </div>
   );
 });
-
-export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};

@@ -1,8 +1,10 @@
-import { component$, isDev } from "@builder.io/qwik";
-import { QwikCityProvider, RouterOutlet } from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
+import { FlowbiteProvider } from 'flowbite-qwik';
 
-import "./global.css";
+import { component$, isDev } from '@builder.io/qwik';
+import { QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
+import { RouterHead } from './components/router-head/router-head';
+
+import './global.css';
 
 export default component$(() => {
   /**
@@ -25,7 +27,9 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body lang="en">
-        <RouterOutlet />
+        <FlowbiteProvider theme="blue" toastPosition="top-right">
+          <RouterOutlet />
+        </FlowbiteProvider>
       </body>
     </QwikCityProvider>
   );
